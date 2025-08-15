@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="FXCryptoHub Terms of Service - Legal agreement for using our trading services">
+  <title>Terms of Service | FXCryptoHub</title>
+  <!-- Reuse the same CSS from privacy.html -->
+  <link rel="preconnect" href="https://kit.fontawesome.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Same CSS as privacy.html (reuse to maintain consistency) */
+    /* General Styling */
+    :root {
+      --primary-color: #1e3c72;
+      --secondary-color: #2a5298;
+      --accent-color: #4CAF50;
+      --text-color: #333;
+      --light-bg: #f4f4f9;
+      --white: #ffffff;
+      --footer-bg: linear-gradient(135deg, #0f2027, #203a43);
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--light-bg);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: var(--white);
+      text-align: center;
+      padding: 1.5rem;
+      position: relative;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+
+    header p {
+      margin: 0.5rem 0;
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    nav {
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      text-decoration: none;
+    }
+
+    /* Services Section */
+    .services-container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .section-title {
+      grid-column: 1 / -1;
+      text-align: center;
+      font-size: 2rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background-color: var(--accent-color);
+    }
+
+    .service-card {
+      background: var(--white);
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .service-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      transition: transform 0.3s ease;
+    }
+    
+    .service-card:hover .service-img {
+      transform: scale(1.03);
+    }
+
+    .service-card h3 {
+      color: var(--primary-color);
+      margin: 0.5rem 0 1rem;
+      font-size: 1.4rem;
+    }
+    
+    .service-card p {
+      flex-grow: 1;
+      margin-bottom: 1.5rem;
+    }
+
+    .service-links {
+      margin-top: auto;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--primary-color);
+      color: var(--white);
+      padding: 0.7rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-weight: 500;
+      text-align: center;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: var(--secondary-color);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Footer */
+    footer {
+      background: var(--footer-bg);
+      color: var(--white);
+      padding: 3rem 1rem 2rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+    
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      text-align: left;
+    }
+    
+    .footer-column h4 {
+      color: var(--accent-color);
+      margin-bottom: 1.5rem;
+      font-size: 1.2rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+    
+    .footer-column h4::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background-color: var(--accent-color);
+    }
+    
+    .footer-column p {
+      margin-bottom: 1.5rem;
+      opacity: 0.9;
+    }
+    
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .footer-column li {
+      margin-bottom: 0.8rem;
+    }
+    
+    .footer-column a {
+      color: #ddd;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+    
+    .footer-column a:hover {
+      color: var(--accent-color);
+      transform: translateX(5px);
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    
+    .social-links a {
+      color: var(--white);
+      font-size: 1.3rem;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+    
+    .social-links a:hover {
+      background-color: var(--accent-color);
+      transform: translateY(-3px);
+    }
+    
+    .copyright {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+    
+    .copyright a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      
+      header p {
+        font-size: 1rem;
+      }
+      
+      .section-title {
+        font-size: 1.7rem;
+      }
+      
+      .services-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      
+      .footer-column {
+        text-align: center;
+      }
+      
+      .footer-column h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      
+      .social-links {
+        justify-content: center;
+      }
+    }
+    
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+main {
+  padding: 20px;
+}
+
+    :root {
+      --primary-color: #1e3c72;
+      --secondary-color: #2a5298;
+      --accent-color: #4CAF50;
+      --text-color: #333;
+      --light-bg: #f4f4f9;
+      --white: #ffffff;
+      --footer-bg: linear-gradient(135deg, #0f2027, #203a43);
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--light-bg);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: var(--white);
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    nav {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Terms Content Styles */
+    .terms-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 1.5rem 3rem;
+    }
+
+    .terms-section {
+      margin-bottom: 2.5rem;
+      background: var(--white);
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .terms-section h2 {
+      color: var(--primary-color);
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--accent-color);
+    }
+
+    .terms-section h3 {
+      color: var(--secondary-color);
+      margin: 1.5rem 0 1rem;
+    }
+
+    .terms-section p, 
+    .terms-section ul {
+      margin-bottom: 1rem;
+    }
+
+    .terms-section ul {
+      padding-left: 2rem;
+    }
+
+    .terms-section li {
+      margin-bottom: 0.5rem;
+    }
+
+    .highlight {
+      background-color: rgba(255, 215, 0, 0.2);
+      padding: 1rem;
+      border-left: 3px solid gold;
+      margin: 1rem 0;
+    }
+
+    /* Footer - Same as privacy.html */
+    footer {
+      background: var(--footer-bg);
+      color: var(--white);
+      padding: 3rem 1rem 2rem;
+      text-align: center;
+    }
+    
+    /* ... (Rest of your footer CSS from privacy.html) ... */
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Terms of Service</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Insights</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="terms-container">
+    <section class="terms-section">
+      <h2>1. Acceptance of Terms</h2>
+      <p>By accessing or using FXCryptoHub's services, you agree to comply with these Terms of Service. If you disagree, you must not use our services.</p>
+      <div class="highlight">
+        <p><strong>Important:</strong> Trading cryptocurrencies and forex involves substantial risk. Only trade with funds you can afford to lose.</p>
+      </div>
+    </section>
+
+    <section class="terms-section">
+      <h2>2. Services Provided</h2>
+      <p>FXCryptoHub offers:</p>
+      <ul>
+        <li>Trading signals and analysis</li>
+        <li>Educational content</li>
+        <li>AI-powered trading tools</li>
+        <li>Copy trading features</li>
+        <li>Portfolio management advice</li>
+      </ul>
+      <p><strong>We are not a financial advisor.</strong> All content is for informational purposes only.</p>
+    </section>
+
+    <section class="terms-section">
+      <h2>3. User Responsibilities</h2>
+      <p>You agree to:</p>
+      <ul>
+        <li>Provide accurate registration information</li>
+        <li>Maintain account security</li>
+        <li>Not share login credentials</li>
+        <li>Comply with all applicable laws</li>
+        <li>Not use our services for illegal activities</li>
+      </ul>
+    </section>
+
+    <section class="terms-section">
+      <h2>4. Payments & Refunds</h2>
+      <h3>4.1 Subscription Fees</h3>
+      <p>Premium services require payment. All fees are non-refundable unless otherwise stated.</p>
+      
+      <h3>4.2 Cancellation</h3>
+      <p>You may cancel subscriptions, but no prorated refunds will be issued.</p>
+    </section>
+
+    <section class="terms-section">
+      <h2>5. Limitation of Liability</h2>
+      <p>FXCryptoHub shall not be liable for:</p>
+      <ul>
+        <li>Trading losses or damages</li>
+        <li>Technical issues beyond our control</li>
+        <li>Third-party service interruptions</li>
+        <li>Inaccurate market data</li>
+      </ul>
+    </section>
+
+    <section class="terms-section">
+      <h2>6. Termination</h2>
+      <p>We may suspend or terminate accounts for:</p>
+      <ul>
+        <li>Violation of these terms</li>
+        <li>Suspicious activity</li>
+        <li>Non-payment</li>
+      </ul>
+    </section>
+
+    <section class="terms-section">
+      <h2>7. Changes to Terms</h2>
+      <p>We may modify these terms at any time. Continued use constitutes acceptance.</p>
+      <p><strong>Last Updated:</strong> <span id="current-date"></span></p>
+    </section>
+  </main>
+
+  <!-- Reuse your footer from privacy.html -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h4>FXCryptoHub</h4>
+        <p>Your gateway to profitable crypto and forex trading strategies since 2020.</p>
+      </div>
+      
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="disclaimer.html">Risk Disclaimer</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#signals">Trading Signals</a></li>
+          <li><a href="services.html#education">Market Education</a></li>
+          <li><a href="services.html#copy-trading">Copy Trading</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h4>Contact Us</h4>
+        <p>Email: legal@fxcryptohub.com</p>
+        <p>Phone: +1 (555) 123-4567</p>
+        <div class="social-links">
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="copyright">
+      <p>&copy; <span id="year"></span> FXCryptoHub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Same JavaScript as privacy.html -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  
+  <!-- Small JavaScript for dynamic year and date -->
+  <script>
+    // Update copyright year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // Update last modified date
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    document.getElementById('current-date').textContent = new Date().toLocaleDateString('en-US', options);
+  </script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    document.getElementById('current-date').textContent = new Date().toLocaleDateString('en-US', options);
+  </script>
+</body>
+</html>

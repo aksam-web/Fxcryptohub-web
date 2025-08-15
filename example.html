@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subscription Plans | FXCryptoHub</title>
+  <style>
+    :root {
+      --primary-color: #1e3c72;
+      --secondary-color: #2a5298;
+      --accent-color: #4CAF50;
+      --mobile-money-color: #FF6B00;
+      --crypto-color: #8A2BE2;
+      --text-color: #333;
+      --light-bg: #f4f4f9;
+      --white: #ffffff;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--light-bg);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+    
+    .pricing-container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      color: var(--primary-color);
+      margin-bottom: 2rem;
+    }
+    
+    .payment-options {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+    
+    .payment-tab {
+      padding: 0.8rem 1.5rem;
+      background: #ddd;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    
+    .payment-tab.active {
+      background: var(--primary-color);
+      color: white;
+    }
+    
+    .payment-tab.mobile-money {
+      background: #FFE8D9;
+      color: var(--mobile-money-color);
+    }
+    
+    .payment-tab.mobile-money.active {
+      background: var(--mobile-money-color);
+      color: white;
+    }
+    
+    .pricing-plans {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    
+    .pricing-card {
+      background: var(--white);
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .pricing-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+    
+    .popular-tag {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: var(--accent-color);
+      color: white;
+      padding: 0.5rem 1.5rem;
+      font-weight: bold;
+      transform: rotate(45deg) translate(25%, -50%);
+      transform-origin: bottom left;
+      font-size: 0.8rem;
+    }
+    
+    .mobile-money-tag {
+      background: var(--mobile-money-color);
+    }
+    
+    .plan-name {
+      font-size: 1.5rem;
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+    
+    .mobile-money .plan-name {
+      color: var(--mobile-money-color);
+    }
+    
+    .plan-price {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin: 1rem 0;
+    }
+    
+    .plan-price span {
+      font-size: 1rem;
+      color: #666;
+    }
+    
+    .plan-features {
+      list-style: none;
+      padding: 0;
+      margin: 2rem 0;
+    }
+    
+    .plan-features li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      align-items: center;
+    }
+    
+    .plan-features li:before {
+      content: "✓";
+      color: var(--accent-color);
+      margin-right: 0.5rem;
+      font-weight: bold;
+    }
+    
+    .mobile-money .plan-features li:before {
+      color: var(--mobile-money-color);
+    }
+    
+    .plan-features li:last-child {
+      border-bottom: none;
+    }
+    
+    .plan-button {
+      display: block;
+      text-align: center;
+      background: var(--primary-color);
+      color: white;
+      padding: 0.8rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    
+    .mobile-money .plan-button {
+      background: var(--mobile-money-color);
+    }
+    
+    .plan-button:hover {
+      background: var(--secondary-color);
+    }
+    
+    .mobile-money .plan-button:hover {
+      background: #E05D00;
+    }
+    
+    .popular .plan-button {
+      background: var(--accent-color);
+    }
+    
+    .popular .plan-button:hover {
+      background: #3d8b40;
+    }
+    
+    .payment-methods {
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+    
+    .payment-method {
+      width: 40px;
+      height: 25px;
+      object-fit: contain;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .pricing-plans {
+        grid-template-columns: 1fr;
+      }
+      
+      .payment-options {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="pricing-container">
+    <h2 class="section-title">Choose Your Plan</h2>
+    
+    <div class="payment-options">
+      <div class="payment-tab active" onclick="showPlans('standard')">Standard Payments</div>
+      <div class="payment-tab mobile-money" onclick="showPlans('mobile-money')">Mobile Money</div>
+    </div>
+    
+    <!-- Standard Payment Plans -->
+    <div id="standard-plans" class="pricing-plans">
+      <!-- Basic Plan -->
+      <div class="pricing-card">
+        <h3 class="plan-name">Starter</h3>
+        <div class="plan-price">$29<span>/month</span></div>
+        <ul class="plan-features">
+          <li>Daily trading signals (3-5/day)</li>
+          <li>Basic market analysis</li>
+          <li>Email support</li>
+          <li>Access to 1 trading strategy</li>
+          <li>Weekly market updates</li>
+        </ul>
+        <div class="payment-methods">
+          <img src="https://cdn-icons-png.flaticon.com/512/196/196566.png" alt="Visa" class="payment-method">
+          <img src="https://cdn-icons-png.flaticon.com/512/196/196578.png" alt="Mastercard" class="payment-method">
+          <img src="https://cdn-icons-png.flaticon.com/512/825/825454.png" alt="PayPal" class="payment-method">
+        </div>
+        <a href="#subscribe" class="plan-button">Get Started</a>
+      </div>
+      
+      <!-- Popular Plan -->
+      <div class="pricing-card popular">
+        <div class="popular-tag">MOST POPULAR</div>
+        <h3 class="plan-name">Pro Trader</h3>
+        <div class="plan-price">$99<span>/month</span></div>
+        <ul class="plan-features">
+          <li>Premium trading signals (8-12/day)</li>
+          <li>Advanced market analysis</li>
+          <li>24/7 priority support</li>
+          <li>Access to all trading strategies</li>
+          <li>Daily webinars</li>
+          <li>AI bot integration</li>
+        </ul>
+        <div class="payment-methods">
+          <img src="https://cdn-icons-png.flaticon.com/512/196/196566.png" alt="Visa" class="payment-method">
+          <img src="https://cdn-icons-png.flaticon.com/512/196/196578.png" alt="Mastercard" class="payment-method">
+          <img src="https://cdn-icons-png.flaticon.com/512/825/825454.png" alt="PayPal" class="payment-method">
+          <img src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="Bitcoin" class="payment-method">
+        </div>
+        <a href="#subscribe" class="plan-button">Get Started</a>
+      </div>
+      
+      <!-- VIP Plan -->
+      <div class="pricing-card">
+        <h3 class="plan-name">VIP Elite</h3>
+        <div class="plan-price">$299<span>/month</span></div>
+        <ul class="plan-features">
+          <li>Real-time trading signals (15-20/day)</li>
+          <li>Personalized market analysis</li>
+          <li>Dedicated account manager</li>
+          <li>1-on-1 coaching sessions</li>
+          <li>Early access to new features</li>
+          <li>Custom AI bot configuration</li>
+        </ul>
+        <div class="payment-methods">
+          <img src="https://cdn-icons-png.flaticon.com/512/196/196566.png" alt="Visa" class="payment-method">
+          <img src="https://cdn-icons-png.flaticon.com/512/196/196578.png" alt="Mastercard" class="payment-method">
+          <img src="https://cdn-icons-png.flaticon.com/512/825/825454.png" alt="PayPal" class="payment-method">
+          <img src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="Bitcoin" class="payment-method">
+        </div>
+        <a href="#subscribe" class="plan-button">Get Started</a>
+      </div>
+    </div>
+    
+    <!-- Mobile Money Plans -->
+    <div id="mobile-money-plans" class="pricing-plans" style="display:none;">
+      <!-- Basic Mobile Money Plan -->
+      <div class="pricing-card mobile-money">
+        <h3 class="plan-name">Starter</h3>
+        <div class="plan-price">UGX 100,000<span>/month</span></div>
+        <ul class="plan-features">
+          <li>Daily trading signals (3-5/day)</li>
+          <li>Basic market analysis</li>
+          <li>WhatsApp support</li>
+          <li>Access to 1 trading strategy</li>
+          <li>Weekly market updates</li>
+        </ul>
+        <div class="payment-methods">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Mtn-logo.svg/1200px-Mtn-logo.svg.png" alt="MTN" class="payment-method">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Airtel_logo.svg/1200px-Airtel_logo.svg.png" alt="Airtel" class="payment-method">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/M-PESA_LOGO-01.svg/1200px-M-PESA_LOGO-01.svg.png" alt="M-Pesa" class="payment-method">
+        </div>
+        <a href="#subscribe" class="plan-button">Pay with Mobile Money</a>
+      </div>
+      
+      <!-- Popular Mobile Money Plan -->
+      <div class="pricing-card mobile-money popular">
+        <div class="popular-tag mobile-money-tag">MOST POPULAR</div>
+        <h3 class="plan-name">Pro Trader</h3>
+        <div class="plan-price">UGX 350,000<span>/month</span></div>
+        <ul class="plan-features">
+          <li>Premium trading signals (8-12/day)</li>
+          <li>Advanced market analysis</li>
+          <li>24/7 WhatsApp priority support</li>
+          <li>Access to all trading strategies</li>
+          <li>Daily webinars</li>
+          <li>Basic AI bot integration</li>
+        </ul>
+        <div class="payment-methods">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Mtn-logo.svg/1200px-Mtn-logo.svg.png" alt="MTN" class="payment-method">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Airtel_logo.svg/1200px-Airtel_logo.svg.png" alt="Airtel" class="payment-method">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/M-PESA_LOGO-01.svg/1200px-M-PESA_LOGO-01.svg.png" alt="M-Pesa" class="payment-method">
+        </div>
+        <a href="#subscribe" class="plan-button">Pay with Mobile Money</a>
+      </div>
+      
+      <!-- VIP Mobile Money Plan -->
+      <div class="pricing-card mobile-money">
+        <h3 class="plan-name">VIP Elite</h3>
+        <div class="plan-price">UGX 1,100,000<span>/month</span></div>
+        <ul class="plan-features">
+          <li>Real-time trading signals (15-20/day)</li>
+          <li>Personalized market analysis</li>
+          <li>Dedicated account manager</li>
+          <li>1-on-1 coaching sessions</li>
+          <li>Early access to new features</li>
+          <li>Custom AI bot configuration</li>
+        </ul>
+        <div class="payment-methods">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Mtn-logo.svg/1200px-Mtn-logo.svg.png" alt="MTN" class="payment-method">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Airtel_logo.svg/1200px-Airtel_logo.svg.png" alt="Airtel" class="payment-method">
+        </div>
+        <a href="#subscribe" class="plan-button">Pay with Mobile Money</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showPlans(planType) {
+      // Update active tab
+      document.querySelectorAll('.payment-tab').forEach(tab => {
+        tab.classList.remove('active');
+      });
+      event.target.classList.add('active');
+      
+      // Show selected plans
+      if(planType === 'standard') {
+        document.getElementById('standard-plans').style.display = 'grid';
+        document.getElementById('mobile-money-plans').style.display = 'none';
+      } else {
+        document.getElementById('standard-plans').style.display = 'none';
+        document.getElementById('mobile-money-plans').style.display = 'grid';
+      }
+    }
+  </script>
+  <div class="offer-banner">
+  <div class="offer-content">
+    <span class="offer-text">🔥 LIMITED TIME OFFER: Get 1 MONTH FREE on annual plans! Offer ends soon!</span>
+    <span class="offer-timer" id="countdown">23:59:59</span>
+  </div>
+</div>
+
+<style>
+.offer-banner {
+  background: linear-gradient(90deg, #FF6B00, #FFA500);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+.offer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.offer-timer {
+  background: rgba(0,0,0,0.2);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-family: monospace;
+}
+@media (max-width: 768px) {
+  .offer-content {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+</style>
+
+<script>
+// Countdown timer
+function updateCountdown() {
+  const now = new Date();
+  const endOfDay = new Date();
+  endOfDay.setHours(23, 59, 59, 999);
+  
+  const diff = endOfDay - now;
+  const hours = Math.floor(diff / (1000 * 60 * 60));
+  const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+  
+  document.getElementById('countdown').textContent = 
+    `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+}
+
+setInterval(updateCountdown, 1000);
+updateCountdown();
+</script>
+</body>
+</html>
