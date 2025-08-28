@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Copy Trading - FXCryptoHub</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .copy-trading-container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    
+    .hero-section {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      padding: 3rem;
+      border-radius: 10px;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .traders-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .trader-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    
+    .trader-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+    
+    .trader-badge {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: var(--accent-color);
+      color: white;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+    
+    .trader-header {
+      padding: 1.5rem 1.5rem 0;
+    }
+    
+    .trader-info {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    
+    .trader-avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 1rem;
+    }
+    
+    .trader-stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      padding: 1rem 1.5rem;
+      background: #f8f9fa;
+    }
+    
+    .stat-item {
+      text-align: center;
+    }
+    
+    .stat-value {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: var(--primary-color);
+    }
+    
+    .stat-label {
+      font-size: 0.8rem;
+      color: #666;
+    }
+    
+    .positive {
+      color: #4CAF50;
+    }
+    
+    .negative {
+      color: #F44336;
+    }
+    
+    .trader-content {
+      padding: 0 1.5rem 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Copy Trading</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Insights</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="copy-trading-container">
+    <div class="hero-section">
+      <h2>Automate Your Success</h2>
+      <p>Copy top-performing traders automatically and profit from their expertise without actively trading yourself.</p>
+      <a href="#start-copying" class="btn" style="background: white; color: var(--primary-color); margin-top: 1rem;">Start Copy Trading</a>
+    </div>
+    
+    <h2 class="section-title">Our Top Performers</h2>
+    <p style="text-align: center; margin-bottom: 2rem;">Select from our verified traders with proven track records.</p>
+    
+    <div class="traders-grid">
+      <div class="trader-card">
+        <div class="trader-badge">TOP RATED</div>
+        <div class="trader-header">
+          <div class="trader-info">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Trader Alex" class="trader-avatar">
+            <div>
+              <h3>CryptoKing</h3>
+              <p>Cryptocurrency Specialist</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="trader-stats">
+          <div class="stat-item">
+            <div class="stat-value positive">+42.7%</div>
+            <div class="stat-label">Monthly ROI</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">87%</div>
+            <div class="stat-label">Win Rate</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">324</div>
+            <div class="stat-label">Copiers</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">14 mos</div>
+            <div class="stat-label">Tracking</div>
+          </div>
+        </div>
+        
+        <div class="trader-content">
+          <p>Specializes in altcoin swing trading with focus on market momentum and volume analysis.</p>
+          <a href="#copy" class="btn" style="width: 100%; text-align: center; margin-top: 1rem;">Copy This Trader</a>
+        </div>
+      </div>
+      
+      <div class="trader-card">
+        <div class="trader-badge">LOW RISK</div>
+        <div class="trader-header">
+          <div class="trader-info">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Trader Maria" class="trader-avatar">
+            <div>
+              <h3>ForexQueen</h3>
+              <p>Forex Specialist</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="trader-stats">
+          <div class="stat-item">
+            <div class="stat-value positive">+28.3%</div>
+            <div class="stat-label">Monthly ROI</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">92%</div>
+            <div class="stat-label">Win Rate</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">517</div>
+            <div class="stat-label">Copiers</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">22 mos</div>
+            <div class="stat-label">Tracking</div>
+          </div>
+        </div>
+        
+        <div class="trader-content">
+          <p>Focuses on major currency pairs with conservative risk management and high win rate strategy.</p>
+          <a href="#copy" class="btn" style="width: 100%; text-align: center; margin-top: 1rem;">Copy This Trader</a>
+        </div>
+      </div>
+      
+      <div class="trader-card">
+        <div class="trader-badge">HIGH GROWTH</div>
+        <div class="trader-header">
+          <div class="trader-info">
+            <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Trader James" class="trader-avatar">
+            <div>
+              <h3>BitcoinBull</h3>
+              <p>BTC Dominant</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="trader-stats">
+          <div class="stat-item">
+            <div class="stat-value positive">+63.5%</div>
+            <div class="stat-label">Monthly ROI</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">76%</div>
+            <div class="stat-label">Win Rate</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">189</div>
+            <div class="stat-label">Copiers</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">9 mos</div>
+            <div class="stat-label">Tracking</div>
+          </div>
+        </div>
+        
+        <div class="trader-content">
+          <p>Aggressive Bitcoin-focused strategy with high risk/high reward approach during volatile market conditions.</p>
+          <a href="#copy" class="btn" style="width: 100%; text-align: center; margin-top: 1rem;">Copy This Trader</a>
+        </div>
+      </div>
+    </div>
+    
+    <section style="margin-top: 4rem; background: white; padding: 2rem; border-radius: 10px;">
+      <h2 style="text-align: center; color: var(--primary-color);">How Copy Trading Works</h2>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
+        <div style="text-align: center;">
+          <div style="font-size: 3rem; color: var(--accent-color); margin-bottom: 1rem;">1</div>
+          <h3>Choose a Trader</h3>
+          <p>Browse our verified traders and select one that matches your risk appetite and goals.</p>
+        </div>
+        
+        <div style="text-align: center;">
+          <div style="font-size: 3rem; color: var(--accent-color); margin-bottom: 1rem;">2</div>
+          <h3>Allocate Funds</h3>
+          <p>Decide how much capital to allocate to copying this trader's strategies.</p>
+        </div>
+        
+        <div style="text-align: center;">
+          <div style="font-size: 3rem; color: var(--accent-color); margin-bottom: 1rem;">3</div>
+          <h3>Copy Automatically</h3>
+          <p>Every trade your selected trader makes will be automatically replicated in your account.</p>
+        </div>
+        
+        <div style="text-align: center;">
+          <div style="font-size: 3rem; color: var(--accent-color); margin-bottom: 1rem;">4</div>
+          <h3>Monitor Performance</h3>
+          <p>Track performance and adjust your copying settings anytime.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h4>FXCryptoHub</h4>
+        <p>Your gateway to profitable crypto and forex trading strategies since 2020. Trusted by 10,000+ traders worldwide.</p>
+      </div>
+      
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="trading-signals.html">Trading Signals</a></li>
+          <li><a href="market-education.html">Market Education</a></li>
+          <li><a href="copy-trading.html">Copy Trading</a></li>
+          <li><a href="ai-bots.html">AI Trading Bots</a></li>
+          <li><a href="portfolio-management.html">Portfolio Management</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h4>Contact Us</h4>
+        <p><i class="fas fa-envelope"></i> info@fxcryptohub.com</p>
+        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+        <p><i class="fas fa-map-marker-alt"></i> 123 Trade Street, Crypto City</p>
+        <div class="social-links">
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="copyright">
+      <p>&copy; <span id="year"></span> FXCryptoHub. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a> | <a href="disclaimer.html">Risk Disclaimer</a></p>
+    </div>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
