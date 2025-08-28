@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Testimonials - FXCryptoHub</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .testimonials-container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .testimonial-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      transition: all 0.3s ease;
+    }
+    
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+    
+    .testimonial-content {
+      font-style: italic;
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding: 0 1rem;
+    }
+    
+    .testimonial-content::before,
+    .testimonial-content::after {
+      content: '"';
+      font-size: 3rem;
+      color: var(--accent-color);
+      opacity: 0.3;
+      position: absolute;
+    }
+    
+    .testimonial-content::before {
+      top: -1rem;
+      left: -0.5rem;
+    }
+    
+    .testimonial-content::after {
+      bottom: -2rem;
+      right: -0.5rem;
+    }
+    
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+    }
+    
+    .author-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 1rem;
+    }
+    
+    .author-details h4 {
+      margin: 0;
+      color: var(--primary-color);
+    }
+    
+    .author-details p {
+      margin: 0.2rem 0 0;
+      color: #666;
+      font-size: 0.9rem;
+    }
+    
+    .rating {
+      color: #FFD700;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Client Testimonials</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Insights</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="testimonials-container">
+    <h2 class="section-title">What Our Clients Say</h2>
+    <p style="text-align: center; margin-bottom: 2rem;">Hear from traders who have transformed their trading journey with FXCryptoHub.</p>
+    
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-content">
+          <p>The trading signals have been incredibly accurate. I've seen a 35% increase in my portfolio since subscribing to the Pro plan.</p>
+        </div>
+        <div class="testimonial-author">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen" class="author-avatar">
+          <div class="author-details">
+            <h4>Michael Chen</h4>
+            <p>Forex Trader</p>
+            <div class="rating">★★★★★</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="testimonial-card">
+        <div class="testimonial-content">
+          <p>The educational content is top-notch. As a beginner, I've learned more in 3 months than I did in a year on my own.</p>
+        </div>
+        <div class="testimonial-author">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson" class="author-avatar">
+          <div class="author-details">
+            <h4>Sarah Johnson</h4>
+            <p>Crypto Investor</p>
+            <div class="rating">★★★★★</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="testimonial-card">
+        <div class="testimonial-content">
+          <p>The AI trading bot has been working 24/7 for me. It's like having a professional trader working while I sleep!</p>
+        </div>
+        <div class="testimonial-author">
+          <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="David Okonjo" class="author-avatar">
+          <div class="author-details">
+            <h4>David Okonjo</h4>
+            <p>Portfolio Manager</p>
+            <div class="rating">★★★★☆</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="testimonial-card">
+        <div class="testimonial-content">
+          <p>Copy trading feature is brilliant. I'm mirroring successful traders and finally seeing consistent profits.</p>
+        </div>
+        <div class="testimonial-author">
+          <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="Emma Rodriguez" class="author-avatar">
+          <div class="author-details">
+            <h4>Emma Rodriguez</h4>
+            <p>Part-time Trader</p>
+            <div class="rating">★★★★★</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="testimonial-card">
+        <div class="testimonial-content">
+          <p>The risk management strategies I learned here saved me during the recent market downturn. Highly recommended!</p>
+        </div>
+        <div class="testimonial-author">
+          <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="James Wilson" class="author-avatar">
+          <div class="author-details">
+            <h4>James Wilson</h4>
+            <p>Swing Trader</p>
+            <div class="rating">★★★★★</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="testimonial-card">
+        <div class="testimonial-content">
+          <p>Customer support is exceptional. They patiently walked me through setting up everything and answered all my questions.</p>
+        </div>
+        <div class="testimonial-author">
+          <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Lisa Tanaka" class="author-avatar">
+          <div class="author-details">
+            <h4>Lisa Tanaka</h4>
+            <p>Beginner Trader</p>
+            <div class="rating">★★★★★</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h4>FXCryptoHub</h4>
+        <p>Your gateway to profitable crypto and forex trading strategies since 2020. Trusted by 10,000+ traders worldwide.</p>
+      </div>
+      
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="trading-signals.html">Trading Signals</a></li>
+          <li><a href="market-education.html">Market Education</a></li>
+          <li><a href="copy-trading.html">Copy Trading</a></li>
+          <li><a href="ai-bots.html">AI Trading Bots</a></li>
+          <li><a href="portfolio-management.html">Portfolio Management</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h4>Contact Us</h4>
+        <p><i class="fas fa-envelope"></i> info@fxcryptohub.com</p>
+        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+        <p><i class="fas fa-map-marker-alt"></i> 123 Trade Street, Crypto City</p>
+        <div class="social-links">
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="copyright">
+      <p>&copy; <span id="year"></span> FXCryptoHub. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a> | <a href="disclaimer.html">Risk Disclaimer</a></p>
+    </div>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
