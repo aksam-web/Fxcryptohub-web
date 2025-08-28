@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FXCryptoHub | AI Trading Bots</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Additional styles specific to the AI Bots page */
+    .hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('pic4.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    
+    .features-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin: 50px 0;
+    }
+    
+    .feature-card {
+      background: #f8f9fa;
+      border-radius: 10px;
+      padding: 25px;
+      width: 300px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-10px);
+    }
+    
+    .feature-card i {
+      font-size: 40px;
+      color: #0066cc;
+      margin-bottom: 15px;
+    }
+    
+    .bot-types {
+      background-color: #f0f8ff;
+      padding: 60px 20px;
+    }
+    
+    .bot-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    
+    .bot-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .bot-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    
+    .bot-content {
+      padding: 20px;
+    }
+    
+    .pricing {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    
+    .pricing-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
+    
+    .pricing-card {
+      background: white;
+      border-radius: 10px;
+      padding: 30px;
+      width: 300px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      border: 2px solid #eaeaea;
+    }
+    
+    .pricing-card.featured {
+      border-color: #0066cc;
+      transform: scale(1.05);
+    }
+    
+    .price {
+      font-size: 32px;
+      font-weight: bold;
+      color: #0066cc;
+      margin: 20px 0;
+    }
+    
+    .cta-section {
+      background: linear-gradient(rgba(0, 102, 204, 0.9), rgba(0, 102, 204, 0.9));
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    
+    .btn {
+      display: inline-block;
+      background: #0066cc;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 20px;
+      transition: background 0.3s ease;
+    }
+    
+    .btn:hover {
+      background: #0052a3;
+    }
+    
+    .btn-outline {
+      background: transparent;
+      border: 2px solid white;
+    }
+    
+    .btn-outline:hover {
+      background: white;
+      color: #0066cc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>FXCryptoHub</h1>
+    <p>Your Gateway to Crypto & Forex Trading</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Insights</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>AI Trading Bots</h2>
+    <p>Automate your trading strategies with our cutting-edge artificial intelligence technology</p>
+    <a href="#pricing" class="btn">View Pricing</a>
+  </section>
+
+  <main>
+    <section>
+      <h2 style="text-align: center; margin-bottom: 40px;">Why Choose Our AI Trading Bots?</h2>
+      
+      <div class="features-container">
+        <div class="feature-card">
+          <i class="fas fa-brain"></i>
+          <h3>Advanced AI Algorithms</h3>
+          <p>Our bots use machine learning to continuously improve trading strategies based on market patterns.</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-chart-line"></i>
+          <h3>24/7 Market Monitoring</h3>
+          <p>Never miss a trading opportunity. Our bots work around the clock across all time zones.</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Risk Management</h3>
+          <p>Built-in safeguards protect your capital with automatic stop-loss and risk diversification.</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-bolt"></i>
+          <h3>Lightning Fast Execution</h3>
+          <p>Execute trades in milliseconds, faster than any human trader could manage.</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-sliders-h"></i>
+          <h3>Customizable Strategies</h3>
+          <p>Tailor the bot's trading parameters to match your risk tolerance and investment goals.</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-mobile-alt"></i>
+          <h3>Mobile Monitoring</h3>
+          <p>Track performance and adjust settings on the go with our mobile app.</p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="bot-types">
+      <h2 style="text-align: center; margin-bottom: 40px;">Our AI Bot Portfolio</h2>
+      
+      <div class="bot-grid">
+        <div class="bot-card">
+          <img src="pic1.jpg" alt="Scalper Bot">
+          <div class="bot-content">
+            <h3>Scalper Pro</h3>
+            <p>Designed for high-frequency small gains. Perfect for volatile markets with quick entry and exit strategies.</p>
+            <ul>
+              <li>Best for: Day traders</li>
+              <li>Risk level: Medium-High</li>
+              <li>Avg. monthly return: 8-15%</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="bot-card">
+          <img src="pic3.jpg" alt="Trend Bot">
+          <div class="bot-content">
+            <h3>Trend Rider</h3>
+            <p>Identifies and capitalizes on market trends early. Uses multiple indicators to confirm trend directions.</p>
+            <ul>
+              <li>Best for: Swing traders</li>
+              <li>Risk level: Medium</li>
+              <li>Avg. monthly return: 5-12%</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="bot-card">
+          <img src="pic5.jpg" alt="Arbitrage Bot">
+          <div class="bot-content">
+            <h3>Arbitrage Master</h3>
+            <p>Exploits price differences across multiple exchanges simultaneously. Low risk with consistent returns.</p>
+            <ul>
+              <li>Best for: Conservative traders</li>
+              <li>Risk level: Low</li>
+              <li>Avg. monthly return: 3-7%</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="pricing" id="pricing">
+      <h2>Transparent Pricing</h2>
+      <p>Choose the plan that works best for your trading needs</p>
+      
+      <div class="pricing-cards">
+        <div class="pricing-card">
+          <h3>Starter</h3>
+          <div class="price">$49/month</div>
+          <ul>
+            <li>1 AI Bot of choice</li>
+            <li>Basic trading strategies</li>
+            <li>Email support</li>
+            <li>Monthly performance reports</li>
+            <li>Up to $5,000 capital</li>
+          </ul>
+          <a href="contact.html" class="btn">Get Started</a>
+        </div>
+        
+        <div class="pricing-card featured">
+          <h3>Professional</h3>
+          <div class="price">$99/month</div>
+          <ul>
+            <li>3 AI Bots of choice</li>
+            <li>Advanced trading strategies</li>
+            <li>Priority support</li>
+            <li>Weekly performance reports</li>
+            <li>Up to $20,000 capital</li>
+            <li>Mobile app access</li>
+          </ul>
+          <a href="contact.html" class="btn">Get Started</a>
+        </div>
+        
+        <div class="pricing-card">
+          <h3>Enterprise</h3>
+          <div class="price">$249/month</div>
+          <ul>
+            <li>All AI Bots available</li>
+            <li>Custom strategy development</li>
+            <li>24/7 dedicated support</li>
+            <li>Real-time performance dashboard</li>
+            <li>Unlimited capital</li>
+            <li>API access</li>
+          </ul>
+          <a href="contact.html" class="btn">Get Started</a>
+        </div>
+      </div>
+    </section>
+    
+    <section class="cta-section">
+      <h2>Ready to Automate Your Trading?</h2>
+      <p>Join thousands of successful traders who have increased their profits with our AI trading bots.</p>
+      <a href="contact.html" class="btn btn-outline">Start Free Trial</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h4>FXCryptoHub</h4>
+        <p>Your gateway to profitable crypto and forex trading strategies since 2020. Trusted by 10,000+ traders worldwide.</p>
+      </div>
+      
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="trading-signals.html">Trading Signals</a></li>
+          <li><a href="market-education.html">Market Education</a></li>
+          <li><a href="copy-trading.html">Copy Trading</a></li>
+          <li><a href="ai-bots.html">AI Trading Bots</a></li>
+          <li><a href="portfolio-management.html">Portfolio Management</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h4>Contact Us</h4>
+        <p><i class="fas fa-envelope"></i> info@fxcryptohub.com</p>
+        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+        <p><i class="fas fa-map-marker-alt"></i> 123 Trade Street, Crypto City</p>
+        <div class="social-links">
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="copyright">
+      <p>&copy; <span id="year"></span> FXCryptoHub. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a> | <a href="disclaimer.html">Risk Disclaimer</a></p>
+    </div>
+  </footer>
+
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  
+  <!-- Small JavaScript for dynamic year -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
